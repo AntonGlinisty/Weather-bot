@@ -2,7 +2,10 @@ import telebot
 from telebot import types
 import requests
 import datetime
-from config import token, open_weather_token
+import os
+
+token = os.getenv('token')
+open_weather_token = os.getenv('open_weather_token')
 
 bot = telebot.TeleBot(token)
 lat = 0
